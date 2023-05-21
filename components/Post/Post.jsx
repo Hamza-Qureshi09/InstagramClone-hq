@@ -2,6 +2,7 @@ import { View, Text, Image, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import { Ionicons, Feather, AntDesign, Entypo } from '@expo/vector-icons';
 import Image1 from '../../assets/images/image1.jpg'
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Post = (props) => {
     const widthOfScreen = Dimensions.get('window').width
@@ -11,16 +12,30 @@ const Post = (props) => {
     return (
         <View className=' mb-1 flex flex-col'>
             {/* top portion */}
-            <View className={`flex flex-row justify-between items-center w-[${widthOfScreen}px] h-12 px-2 `}>
+            <View className={`flex flex-row justify-between items-center w-[${widthOfScreen}px] h-14 px-2 `}>
                 {/* left side */}
                 <View className='flex flex-row justify-center items-center'>
-                    <View className=' h-10 w-10 bg-gray-600 rounded-full flex flex-col justify-center items-center border-2 border-red-500'>
+                    <LinearGradient
+                        colors={['#DD2A7B', '#FFC371']}
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 1, y: 1 }}
+                        style={{
+                            height: 40,
+                            width: 40,
+                            borderWidth: 2,
+                            padding: 2,
+                            borderRadius: 100,
+                        }}
+                    >
                         <Image source={Image1} className="h-full w-full rounded-full object-cover " />
+                    </LinearGradient>
+                    <View className='ml-1 flex flex-col justify-start items-start'>
+                        <Text className='text-white  text-sm font-Nunito_Medium tracking-tight lowercase'>Hamza_Qureshi</Text>
+                        <Text className='text-white  text-[10px] font-Nunito_Regular tracking-tight capitalize'>sponsored</Text>
                     </View>
-                    <Text className='text-white ml-2 text-sm '>Hamza Qureshi</Text>
                 </View>
                 {/* right side */}
-                <Entypo name="dots-three-vertical" size={24} color="white" />
+                <Entypo name="dots-three-vertical" size={20} color="white" />
             </View>
             {/* mid protion */}
             <View className={`max-h-[300px] w-[${widthOfScreen}px] flex flex-col justify-center items-center`}>
