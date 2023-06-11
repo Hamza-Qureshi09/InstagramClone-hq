@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "testingInstagramClone",
+    "slug": "testingInstagramClone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "assets/images/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b4ddc4d8-a7c6-4c5c-aa3a-f148608de315"
+      },
+      "API_URL": "http://192.168.10.4:6004"
+    },
+    "androidNavigationBar": {
+
+     "visible": true,
+
+     "barStyle": "dark-content",
+
+     "backgroundColor": "#000000"
+   }
+  }
+}
